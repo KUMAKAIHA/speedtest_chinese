@@ -73,7 +73,11 @@ header('Pragma: no-cache');
                 ?><script type="text/javascript">window.location=location.protocol+"//"+location.host+location.pathname;</script><?php
             } else {
                 ?>
-                <form action="stats.php" method="GET"><input type="hidden" name="op" value="logout" /><input type="submit" value="登出" /></form>
+                <form action="stats.php" method="GET">
+                    <input type="hidden" name="op" value="logout" />
+                    <input type="submit" value="登出" />
+                    <input type="button" value="返回" onclick="window.location.href = window.location.origin;" style="margin-left: 10px;" />
+                </form>
                 <form action="stats.php" method="GET">
                     <h3>搜索测速结果</h3>
                     <input type="hidden" name="op" value="id" />
@@ -113,14 +117,14 @@ header('Pragma: no-cache');
                             <td><?= htmlspecialchars($speedtest['timestamp'], ENT_HTML5, 'UTF-8') ?></td>
                         </tr>
                         <tr>
-                            <th>IP 和 ISP 信息</th>
+                            <th>IP和ISP信息</th>
                             <td>
                                 <?= htmlspecialchars($speedtest['ip'], ENT_HTML5, 'UTF-8') ?><br/>
                                 <?= htmlspecialchars($speedtest['ispinfo'], ENT_HTML5, 'UTF-8') ?>
                             </td>
                         </tr>
                         <tr>
-                            <th>用户代理和区域</th>
+                            <th>设备信息</th>
                             <td><?= htmlspecialchars($speedtest['ua'], ENT_HTML5, 'UTF-8') ?><br/>
                                 <?= htmlspecialchars($speedtest['lang'], ENT_HTML5, 'UTF-8') ?>
                             </td>
