@@ -12,10 +12,6 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install -j$(nproc) gd pdo pdo_mysql pdo_pgsql pgsql \
     && rm -rf /var/lib/apt/lists/*
 
-# Set the timezone
-ENV TZ=Asia/Shanghai
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
 # Prepare files and folders
 RUN mkdir -p /speedtest/
 
@@ -41,6 +37,7 @@ ENV TELEMETRY=false
 ENV ENABLE_ID_OBFUSCATION=false
 ENV REDACT_IP_ADDRESSES=false
 ENV WEBPORT=80
+ENV TZ=Asia/Shanghai
 
 # Final touches
 EXPOSE 80
