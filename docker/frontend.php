@@ -439,7 +439,7 @@ function copyResultsURL() {
 			<img src="" id="resultsImg" onclick="copyResultsURL()" />
 		</div>
 	</div>
-	Copyright © 2024 <a href="https://www.kumakaiha.com">KUMAKAIHA</a>
+	由此获取本站 <a href="https://github.com/KUMAKAIHA/speedtest_chinese">源代码</a>
 </div>
 <div id="privacyPolicy" style="display:none">
 <h2>隐私政策</h2>
