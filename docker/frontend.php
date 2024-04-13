@@ -260,7 +260,7 @@ function copyResultsURL() {
 	}
 	#test{
 		margin-top:2em;
-		margin-bottom:12em;
+		margin-bottom:10em;
 	}
 	div.testArea{
 		display:inline-block;
