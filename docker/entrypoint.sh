@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 set -x
+
 # Cleanup
 rm -rf /var/www/html/*
 # Copy frontend files
@@ -71,3 +72,4 @@ fi
 echo "Done, Starting APACHE"
 # This runs apache
 apache2-foreground
+
