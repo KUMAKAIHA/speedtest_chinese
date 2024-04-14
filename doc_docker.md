@@ -52,6 +52,7 @@ services:
 * __`DISABLE_IPINFO`__: 如果设置为 true，则不会从 ipinfo.io 获取 ISP 信息和距离。默认值：`false`
 * __`DISTANCE`__: 当 `DISABLE_IPINFO` 设置为 false 时，指定从服务器测量的距离方式。可以是 `km` 表示千米，`mi` 表示英里，或空字符串表示禁用距离测量。默认值：`km`
 * __`WEBPORT`__: 允许选择包含的 Web 服务器的自定义端口。默认值：`80`。请注意，您将需要通过 -p 参数在 Docker 中公开它。
+* __`TZ`__: 设定容器时区，并使得遥测数据符合当地时间。默认值：`Asia/Shanghai`。注意：仅在x86设备使用SQLITE的Docker环境中测试。
 
 如果启用了遥测，将在 `http://your.server/results/stats.php` 上提供统计页面，但必须指定密码。
 
