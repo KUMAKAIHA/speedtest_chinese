@@ -4,10 +4,10 @@ LibreSpeed的Docker版本可以在这里找到：[GitHub Packages](https://githu
 要从 Docker 仓库下载 LibreSpeed，请使用以下命令：
 
 ```
-docker pull ghcr.io/librespeed/speedtest
+docker pull ghcr.io/kumakaiha/speedtest
 ```
 
-现在您将拥有一个名为 `librespeed/speedtest` 的新 Docker 镜像。
+现在您将拥有一个名为 `kumakaiha/speedtest` 的新 Docker 镜像。
 
 ## Docker Compose
 要使用 [docker compose](https://docs.docker.com/compose/) 启动容器，可以使用以下配置：
@@ -17,7 +17,7 @@ version: '3.7'
 services:
   speedtest:
     container_name: speedtest
-    image: ghcr.io/librespeed/speedtest:latest
+    image: ghcr.io/kumakaiha/speedtest:latest
     restart: always
     environment:
       MODE: standalone
@@ -65,13 +65,13 @@ services:
 此命令在端口 80 上使用默认设置以独立模式启动 LibreSpeed：
 
 ```
-docker run -e MODE=standalone -p 80:80 -it ghcr.io/librespeed/speedtest
+docker run -e MODE=standalone -p 80:80 -it ghcr.io/kumakaiha/speedtest
 ```
 
 此命令在端口 86 上使用独立模式启动 LibreSpeed，包括遥测、ID 模糊化和统计密码：
 
 ```
-docker run -e MODE=standalone -e TELEMETRY=true -e ENABLE_ID_OBFUSCATION=true -e PASSWORD="yourPasswordHere" -e WEBPORT=86 -p 86:86 -v $PWD/db-dir/:/database -it ghcr.io/librespeed/speedtest
+docker run -e MODE=standalone -e TELEMETRY=true -e ENABLE_ID_OBFUSCATION=true -e PASSWORD="yourPasswordHere" -e WEBPORT=86 -p 86:86 -v $PWD/db-dir/:/database -it ghcr.io/kumakaiha/speedtest
 ```
 
 ## 多个测试点
@@ -137,5 +137,5 @@ docker run -e MODE=backend -p 80:80 -it ghcr.io/librespeed/speedtest
 此命令在前端模式下启动 LibreSpeed，使用给定的 `servers.json` 文件，以及遥测、ID 模糊化和统计密码：
 
 ```
-docker run -e MODE=frontend -e TELEMETRY=true -e ENABLE_ID_OBFUSCATION=true -e PASSWORD="yourPasswordHere" -v $(pwd)/servers.json:/servers.json -p 80:80 -it ghcr.io/librespeed/speedtest
+docker run -e MODE=frontend -e TELEMETRY=true -e ENABLE_ID_OBFUSCATION=true -e PASSWORD="yourPasswordHere" -v $(pwd)/servers.json:/servers.json -p 80:80 -it ghcr.io/kumakaiha/speedtest
 ```
