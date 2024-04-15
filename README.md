@@ -51,7 +51,7 @@
 为你的LibreSpeed安装构建Android客户端的模板可以在[这里](https://github.com/librespeed/speedtest-android)找到。
 
 ## Docker
-Docker镜像可以在[GitHub](https://github.com/librespeed/speedtest/pkgs/container/speedtest)上找到，查看我们的[docker文档](doc_docker.md)了解更多信息。
+Docker镜像可以在[Docker Hub](https://hub.docker.com/repository/docker/kumakaiha/speedtest/general)上找到，查看我们的[docker文档](doc_docker.md)了解更多信息。
 
 ## Go后端
 一个Go实现版本可以在[`speedtest-go`](https://github.com/librespeed/speedtest-go)仓库中找到，由[Maddie Zhan](https://github.com/maddie)维护。
